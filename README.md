@@ -29,6 +29,6 @@ text
 License
 -------
 
-pandoc-writer.md: Creative Commons License [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)
-Other: Public Domain
+- pandoc-writer.md: Creative Commons License [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)
+- Other: Public Domain
 
