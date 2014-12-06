@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="jp"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>LearnOSM</title>
+    <link href="LearnOSM_files/reset.css" rel="stylesheet" type="text/css">
+    <link href="LearnOSM_files/style.css" rel="stylesheet" type="text/css">
+    <link href="LearnOSM_files/print.css" rel="stylesheet" type="text/css" media="print">
+    <link rel="shortcut icon" href="http://learnosm.org/img/favicon.ico" type="image/x-icon">
+    <link href="LearnOSM_files/jquery-ui.css" rel="stylesheet">
+    <link href="LearnOSM_files/css.css" rel="stylesheet" type="text/css">
+    <script src="LearnOSM_files/ga.js" async="" type="text/javascript"></script><script src="LearnOSM_files/jquery-1.js"></script>
+    <script src="LearnOSM_files/jquery-ui-1.js"></script>
+    <script>
+      window.app = window.app || {};
+      window.app.permalink = '/jp/editing/id-editor/';
+      window.app.baseurl = '';
+      window.app.lang = 'jp';
+      // Google Analytics
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-7046215-3']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="LearnOSM_files/site.js"></script>
+  <link href="LearnOSM_files/floatingPanel.css" type="text/css" rel="stylesheet"></head>
+  <body>
+  <div id="wrapper">
+    <div class="fillG cell12" id="banner-top">
+      <small class="language-switcher marginL cell6 cf">
+        <a href="http://learnosm.org/en/editing/id-editor/" lang="en">English</a> |
+        <a href="http://learnosm.org/bi/editing/id-editor/" lang="bi">Bahasa Indonesia</a> |
+        <a class="active" href="http://learnosm.org/jp/editing/id-editor/" lang="jp">日本語</a> |
+        <a href="http://learnosm.org/pt/editing/id-editor/" lang="pt">Português</a> |
+        <a href="http://learnosm.org/it/editing/id-editor/" lang="it">Italiano</a> |
+        <a href="http://learnosm.org/fr/editing/id-editor/" lang="fr">Français</a> |
+        <a href="http://learnosm.org/de/editing/id-editor/" lang="de">Deutsch</a> |
+        <a href="http://learnosm.org/es/editing/id-editor/" lang="es">Español</a> |
+        <a href="http://learnosm.org/hr/editing/id-editor/" lang="hr">Hrvatski</a>
+      </small>
+      <!-- small search bar does not appear on the front page -->
+      
+      <form class="searchbox-default rounded">
+        <span class="icon logo-search"></span>
+        <input autocomplete="off" id="search-field" name="search" class="default-value ui-autocomplete-input" type="text"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span>
+      </form>
+      
+    </div>
+    <div id="header" class="cell12">
+      <div class="marginL cell9 padAll">
+        <div class="cell7 marginR">
+           <span><a href="http://learnosm.org/jp" class="logo logo-learn"></a></span>
+           <span class="tagline">はじめてからのOpenStreetMapガイド</span>
+        </div>
+        <a class="banner hide-mobile">
+          <span class="jp">ガイドの拡充にご協力ください</span>
+        </a>
+        <a class="banner-mobile hide-desktop show-mobile" href="http://learnosm.org/jp/contribute/">
+        </a>
+      </div>
+    </div>
+    <div id="content" class="cf">
+        <div class="doc-nav marginL cell3 padAll cf" id="doc-nav-left">
+      <ul>
+
+    
+      
+      <li class="doc rounded">
+        <a class="title cover " href="http://learnosm.org/jp/editing/">
+          <span>詳しい編集方法</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  " href="http://learnosm.org/jp/editing/josm-tools/">
+          <span>JOSMツール</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  " href="http://learnosm.org/jp/editing/josm-plugins/">
+          <span>JOSMプラグイン</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  " href="http://learnosm.org/jp/editing/more-tools/">
+          <span>その他のツール</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  " href="http://learnosm.org/jp/editing/josm-presets/">
+          <span>JOSMプリセット</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  " href="http://learnosm.org/jp/editing/creating-presets/">
+          <span>独自プリセットの作成</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  " href="http://learnosm.org/jp/editing/josm-relations/">
+          <span>JOSMでのリレーション操作</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  " href="http://learnosm.org/jp/editing/josm-editing-techniques/">
+          <span>編集テクニック</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  " href="http://learnosm.org/jp/editing/aerial-imagery/">
+          <span>航空写真・衛星写真</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  " href="http://learnosm.org/jp/editing/correcting-imagery-offset/">
+          <span>画像オフセット調整</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  " href="http://learnosm.org/jp/editing/conflict-resolution/">
+          <span>競合の解決</span>
+        </a>
+      </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <li class="doc rounded">
+        <a class="title  active" href="http://learnosm.org/jp/editing/id-editor/">
+          <span>iDエディタ</span>
+        </a>
+      </li>
+      
+    
+      
+    
+  </ul>
+
+  <ul style="margin-top:40px;">
+      <li class="doc rounded">
+        <a class="title cover">
+          
+            <span>Other guides</span>
+          
+        </a>
+      </li>
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+          <li class="doc rounded">
+            <a class="title" href="http://learnosm.org/jp/map-design/">
+              <span>地図デザイン</span>
+            </a>
+          </li>
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+          <li class="doc rounded">
+            <a class="title" href="http://learnosm.org/jp/osm-data/">
+              <span>OSMデータ</span>
+            </a>
+          </li>
+        
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+          <li class="doc rounded">
+            <a class="title" href="http://learnosm.org/jp/beginner/">
+              <span>ビギナーズガイド</span>
+            </a>
+          </li>
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+  </ul>
+
+</div>
+<div style="min-height: 788px;" class="doc-main doc cell5 padAll">
+  <h1>iDエディタ</h1>
+
+<p>idエディタは2013年に新しく公開された、OpenStreetMapのためのブラウザベース編集アプリケーションです。
+OpenStreetMapの編集を非常に簡単に行うことが可能です。iDは動作が軽く、操作も簡単で、航空写真やGPS、Field 
+Papersなどさまざまな情報を使って地図を作成することができます。</p>
+
+<p>iDエディタは小規模でそれほど込み入っていない編集を行なうことに適しており、JOSMのように複雑な操作を覚える必要がありません。この章では、iDを使った基本的な編集操作について解説を行います。</p>
+
+<h2 title="Link to this section" id="id">iDエディタの起動</h2>
+
+<ul>
+<li>iDを使うには、インターネットへの接続が必要です</li>
+<li>ブラウザを起動し、OpenStreetMapのウェブサイト <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org</a> を表示してください。</li>
+<li>OpenStreetMapアカウントを使って <strong>ログイン</strong> を行います</li>
+<li>編集の対象となる場所まで表示を移動させ、ズームします</li>
+<li><strong>編集</strong> ボタンの右側にある小さな三角形をクリックし、そこから <strong>iD (ブラウザ内エディタ) で編集</strong> を選択します</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image1.png" alt="image1"></p>
+
+<h2 title="Link to this section" id="id">iDエディタのユーザインターフェース</h2>
+
+<p class="has-image"><img src="LearnOSM_files/image2.png" alt="image2"></p>
+
+<ol>
+<li><strong>地物パネル:</strong> 地図上で選択したオブジェクトに付与されているタグが表示されます。
+ このパネルから、タグの追加や編集が可能です。</li>
+<li><strong>ツール:</strong> 基本的な編集ツールが表示されるパネル:
+
+<ul>
+<li class="has-image">ポイントを描く
+<img src="LearnOSM_files/image3.png" alt="image3"></li>
+<li class="has-image">ラインを描く
+<img src="LearnOSM_files/image4.png" alt="image4"></li>
+<li class="has-image">シェイプ(ポリゴン/面)を描く
+<img src="LearnOSM_files/image5.png" alt="image5"></li>
+<li class="has-image">やり直し
+<img src="LearnOSM_files/image6.png" alt="image6"></li>
+<li class="has-image">やり直しの取り消し
+<img src="LearnOSM_files/image7.png" alt="image7"></li>
+<li class="has-image">変更の保存
+<img src="LearnOSM_files/image8.png" alt="image8"></li>
+</ul>
+</li>
+<li><strong>マップパネル:</strong> 各種設定を行なうためのパネル:
+
+<ul>
+<li class="has-image">ズームイン
+<img src="LearnOSM_files/image9.png" alt="image9"></li>
+<li class="has-image">ズームアウト
+<img src="LearnOSM_files/image10.png" alt="image10"></li>
+<li class="has-image">現在地を表示
+<img src="LearnOSM_files/image11.png" alt="image11"></li>
+<li class="has-image">背景画像レイヤを変更
+<img src="LearnOSM_files/image12.png" alt="image12"></li>
+<li class="has-image">ヘルプメニューを表示
+<img src="LearnOSM_files/image13.png" alt="image13"></li>
+</ul>
+</li>
+<li><strong>情報パネル:</strong>
+このパネルには多くの情報が表示されます。例えば、表示中の地域を過去に編集したユーザの一覧などです。</li>
+</ol>
+
+
+<h2 title="Link to this section" id="">背景画像レイヤの変更</h2>
+
+<p>データの編集を始める前に、背景の画像を変更することが可能です。</p>
+
+<ul>
+<li><strong>背景画像設定</strong> のボタンをクリックします</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image14.png" alt="image14"></p>
+
+<ul>
+<li>以下のようなパネルが表示されます:</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image15.png" alt="image15"></p>
+
+<ul>
+<li>以下のボックスから <strong>輝度調整</strong> の設定値を変更可能です:</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image16.png" alt="image16"></p>
+
+<ul>
+<li>輝度のレベルは3段階から選択できます。 100%、50%、そして0%です。それぞれのボタンをクリックしてみて、どのくらい画像が変わるかを確認してみてください。</li>
+<li>また、 <strong>背景図レイヤを切り替える</strong> ことも可能です。これにより、任意のタイル画像を背景図として利用することが可能です(デフォルトはBing衛星写真)。表示されているオプションからいくつか選択してみてください。</li>
+<li>また、 <strong>カスタム</strong> の項目を選択することで、独自のタイルを追加することもできます</li>
+<li><p>例えば <strong>Field Papers</strong> の画像を追加したい場合、 <strong>カスタム</strong> を選び、以下のようなかんじで、あなたが作成した <strong>Field PapersのスナップショットURL</strong> を記入してください:</p>
+
+<p><a href="http://fieldpapers.org/snapshot.php?id=cqhmf2v9#18/37.80593/-122.22715">http://fieldpapers.org/snapshot.php?id=cqhmf2v9#18/37.80593/-122.22715</a></p></li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image17.png" alt="image17"></p>
+
+<ul>
+<li><strong>コンピュータに保存されているGPSトラックを表示させる</strong> ことも可能です。(GPX形式ファイル) この操作はとても簡単で、単にGPXファイルをiDエディタにドラッグするだけです。</li>
+<li>もし<a href="http://learnosm.org/en/editing/aerial-imagery">画像オフセット</a>がある場合、背景画像をずらすことで <strong>画像のオフセットを修正</strong> することが可能です。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image18.png" alt="image18"></p>
+
+<ul>
+<li>背景画像をずらすには、ナビゲーションボタンををクリックしてください。リセットボタンをクリックすると、画像の位置をデフォルトに戻すことができます。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image20.png" alt="image20"></p>
+
+<h2 title="Link to this section" id="id">iDを使った編集の基礎</h2>
+
+<p>iDによる編集を行う前に、 <strong>あなたが現地をよく知っている場所まで、表示を移動させましょう。</strong> マウスの左ボタンをクリックしながら動かすことで、表示されている領域を移動させることができます。</p>
+
+<h3 title="Link to this section" id="">ポイント情報の追加</h3>
+
+<ul>
+<li>あたらしくポイント情報を追加するには、 <strong>ポイント</strong> ボタンをクリックします。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image3.png" alt="image3"></p>
+
+<ul>
+<li>マウスのカーソルが、プラス(+)の形に変わります。その状態で地図をクリックすると、その場所にポイントデータが作成されます。例えばあなたが病院がある位置を知っている場合、その病院の建物の位置をクリックしてください。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image21.png" alt="image21"></p>
+
+<ul>
+<li>新しくポイントが作成されます。作成と同時に画面左側へパネルが表示され、そのオブジェクトがどのような属性を持っているかを選択することが可能になります。 <strong>病院</strong> をクリックして、そのポイント情報を病院、としてタグ付けしましょう。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image22.png" alt="image22"></p>
+
+<ul>
+<li>作成したポイントに対し、フォームから詳細な情報を追加することもできます。例えば病院の名称や住所、あるいはもし知っていれば、その他の情報を追加することもできます。入力フォームの表示は、その地物に付与されているタグ種類によって異なります。</li>
+<li>ポイントを置く場所を間違えてしまった場合は、そのポイントの上でマウスをクリックし、そのまま正しい位置までポイントをドラッグして移動させて
+ください。ポイントを削除する場合は、ポイントの上で左クリックし、いくつか表示される円型のメニューからゴミ箱の形をしたアイコンを選んでください。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image23.png" alt="image23"></p>
+
+<p>iDで作成された “ポイント” は、OSMデータ上では、なにかしらの “タグ” が付与されたスタンドアローンの “ノード” 情報として扱われます。</p>
+
+<h3 title="Link to this section" id="">ラインを描く</h3>
+
+<ul>
+<li>ラインを新しく描くには、 <strong>ライン</strong> ボタンをクリックします。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image4.png" alt="image4"></p>
+
+<ul>
+<li>マウスのカーソルが、プラス(+)の形に変わります。まだ描かれていない道路の位置にカーソルを合わせ、道路をトレース(なぞり書き)してみてく
+ださい。道路の一方の端でいちどクリックし、マウスを移動させてポイントを追加してゆきます。描き終える場合は、その位置でダブルクリックしてください。
+左側のパネルに注目してみましょう。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image24.png" alt="image24"></p>
+
+<ul>
+<li>ポイントのときと同じように、ラインを表現するために適切とおもわれるタグを選択します。</li>
+<li>ラインに含まれるポイントデータは、そのポイントの場所で左クリックしてドラッグすることで移動させることができます。</li>
+<li>ライン全体を移動させることも可能です。 <strong>移動ツール</strong> を選択し、ラインを新しい位置へ移動させてください。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image30.png" alt="image30"></p>
+
+<ul>
+<li><p>ラインに含まれるポイントを左クリックした場合、以下のツールが表示されます:</p>
+
+<ul>
+<li class="has-image">ラインからポイントを削除
+<img src="LearnOSM_files/image23.png" alt="image23"></li>
+<li class="has-image">ラインからポイントを切り離す
+<img src="LearnOSM_files/image26.png" alt="image26"></li>
+<li class="has-image">選択したポイントの位置で、ラインを2本に分割する
+<img src="LearnOSM_files/image27.png" alt="image27"></li>
+</ul>
+</li>
+<li><p>ラインの上で左クリックした場合、以下のツールが表示されます:</p>
+
+<ul>
+<li class="has-image">ラインを削除
+<img src="LearnOSM_files/image23.png" alt="image23"></li>
+<li class="has-image">ラインを円形にする (ラインがエリアとして閉じている場合のみ有効)
+<img src="LearnOSM_files/image29.png" alt="image29"></li>
+<li class="has-image">ラインを移動
+<img src="LearnOSM_files/image30.png" alt="image30"></li>
+<li class="has-image">ラインの角を直角にする (ラインがエリアとして閉じている場合のみ有効)
+<img src="LearnOSM_files/image31.png" alt="image31"></li>
+<li class="has-image">ラインの向きを逆転させる
+<img src="LearnOSM_files/image32.png" alt="image32"></li>
+</ul>
+</li>
+</ul>
+
+
+<p>iDで作成された “ライン” は、OSMデータ上では、なにかしらの “タグ” が付与された “ウェイ” 情報として扱われます。</p>
+
+<h3 title="Link to this section" id="">シェイプ(ポリゴン)を描く</h3>
+
+<ul>
+<li>シェイプを新しく描く場合、 <strong>エリア</strong> ボタンをクリックします。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image34.png" alt="image34"></p>
+
+<ul>
+<li>マウスのカーソルが、プラス(+)の形に変わります。衛星写真の画像を手がかりに、建物の形をトレースしてみましょう。</li>
+<li>シェイプの色は、オブジェクトに付与したタグ情報の種類によって変わります。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image35.png" alt="image35"></p>
+
+<ul>
+<li>シェイプを選択した時に表示されるツールは、ラインを選択した時に表示されるツールと同じです。</li>
+</ul>
+
+
+<p>iDで作成された “ポリゴン” は、OSMデータ上では、なにかしらの “タグ” が付与された “閉じたウェイ” 情報として扱われます。</p>
+
+<h2 title="Link to this section" id="">編集結果の保存</h2>
+
+<ul>
+<li>OpenStreetMapデータの編集が終わり、内容を保存する場合は、 <strong>保存</strong> ボタンをクリックしてください。画面左側のパネルが、データのアップロード表示に切り替わります。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image36.png" alt="image36"></p>
+
+<ul>
+<li>変更した内容を簡単にコメントして、 <strong>保存</strong> を押してください。</li>
+</ul>
+
+
+<h2 title="Link to this section" id="">追加情報、リストにないタグの追加など</h2>
+
+<ul>
+<li><p>オブジェクトの編集を行う際、属性入力パネルの下の方にいくつかのアイコンが並んで表示されています。これらのアイコンをクリックすることで、そのオブジェクトに細かい情報を追加することが可能です:</p>
+
+<ul>
+<li class="has-image">標高を追加
+<img src="LearnOSM_files/image37.png" alt="image37"></li>
+<li class="has-image">ノートを追加
+<img src="LearnOSM_files/image38.png" alt="image38"></li>
+<li class="has-image">連絡先/電話番号を追加
+<img src="LearnOSM_files/image39.png" alt="image39"></li>
+<li class="has-image">情報源(sourceタグ)を追加
+<img src="LearnOSM_files/image40.png" alt="image40"></li>
+<li class="has-image">ウェブサイトを追加
+<img src="LearnOSM_files/image41.png" alt="image41"></li>
+<li class="has-image">車椅子の利用可否を追加
+<img src="LearnOSM_files/image42.png" alt="image42"></li>
+<li class="has-image">Wikipediaのリンクを追加
+<img src="LearnOSM_files/image43.png" alt="image43"></li>
+</ul>
+</li>
+<li><p><strong>すべてのタグ</strong> をクリックすることで、選択肢にないタグを付与することも可能です。</p></li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image44.png" alt="image44"></p>
+
+<ul>
+<li>その地物に付与されているすべてのタグが表示されます。</li>
+</ul>
+
+
+<p class="has-image"><img src="LearnOSM_files/image45.png" alt="image45"></p>
+
+<ul>
+<li>プラスボタン (+) をクリックすることでキーと値のセットを追加することができます。ゴミ箱のアイコンをクリックすると、そのタグ情報が削除されます。</li>
+</ul>
+
+
+<h2 title="Link to this section" id="idjosm">iDとJOSMの違い</h2>
+
+<p>iDのよいところは…</p>
+
+<ul>
+<li>単純な編集を行う場合</li>
+<li>インターネットの回線が安定しており、背景画像の読み込みやデータの保存が行える場合</li>
+<li>シンプルでよく使われるタグ情報に従って入力を行いたい場合</li>
+</ul>
+
+
+<p>JOSMのよいところは…</p>
+
+<ul>
+<li>建物情報を数多く入力する場合 (JOSMの building tool が最適です)</li>
+<li>すでに入力されているポリゴンやラインの数が多く、それらを編集したい場合</li>
+<li><pre><code>インターネットの回線が不安定、あるいはオフラインの場合
+</code></pre></li>
+<li>特殊なタグ定義や、独自のタグプリセット情報を利用したい場合</li>
+</ul>
+
+
+  
+  
+  <div class="feedback padAll">
+    <span>この章は役に立ちましたか？</span>
+    <a href="http://learnosm.org/jp/contribute">ガイドの改善にご意見ください</a>
+  </div>
+  
+</div>
+
+<script>
+  // loop through the node list to get the innerHTML from each node
+  // copy that as the id for the node
+  var addId = function(list){
+    for (i = 0; i < list.length; i++) {
+      element = list[i];
+      sectionCopy = element.innerHTML.toLowerCase().replace(/ /g, '-').replace(/([^0-9a-z-])/g,''); //substitute space with dash
+      element.id = sectionCopy;
+    }
+  };
+  var allH2 = document.getElementsByTagName('h2');
+  var allH3 = document.getElementsByTagName('h3');
+  addId(allH2);
+  addId(allH3);
+  // make the titles linkable
+  $('h2[id], h3[id]','.doc').attr('title', 'Link to this section').click(function(e) {
+    window.location.hash = $(e.currentTarget).attr('id');
+  });
+  //select the image containers so the images can be centered, styles in css
+  $('img').parent().addClass('has-image');
+  
+  // make title nav sticky
+   // excluding cover pages
+  $(document).ready(function(){
+    var nav = $('.doc-nav'),
+        navTop = nav.offset().top,
+        navHeight = nav.outerHeight(true),
+        footerHeight = $('#footer').outerHeight(true);
+    $(window).scroll(function(e){
+        var scrolled = $(this).scrollTop();
+        var leftToScroll = $(document).height() - scrolled;
+        
+        if (scrolled >= navTop && leftToScroll > (footerHeight + navHeight + 20)) {
+        // if in the middle - nav box is positioned fixed
+            nav.addClass('fixed');
+            nav.removeClass('bottom');
+        } else if (scrolled < navTop) {
+        // if at the beginning - nav box is positioned at top
+            nav.removeClass('fixed');
+            nav.removeClass('bottom');
+        } else if (leftToScroll <= (footerHeight + navHeight + 20)) {
+        // if at the end - nav box is positioned at bottom
+        // only if height of viewport is not sufficient to have nav box and footer in it
+            if ((footerHeight + navHeight + 20) > $(window).height()) {
+                nav.removeClass('fixed');
+                nav.addClass('bottom');
+            }
+        }
+    });
+  });
+  
+  // get the second url of doc nav and make it the url of the 'proceed' link
+  var proceedTo = $('.doc-nav li:nth-child(2) a').attr('href');
+  $('a.start').attr('href',proceedTo);
+  // Set the min-height of the page dynamically based on height of navigation div
+  $('.doc-main').css("min-height", function() {
+    return $('#doc-nav-left').height() + 25;
+  });
+  
+</script>
+    </div>
+    <small id="footer" class="fillG cell12">
+      <ul class="contact marginL marginR cell5 padAll">
+        <li><a class="email" href="mailto:learnosm@hotosm.org">learnosm@hotosm.org</a></li>
+        <li><a class="twitter" href="https://twitter.com/learnosm">@learnOSM</a></li>
+        <li><a class="github" href="http://github.com/hotosm/learnosm"> Hosted on Github</a></li>
+      </ul>
+      <a rel="license" class="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
+      	<img src="LearnOSM_files/80x15.png" alt="CC0">
+      </a>
+      <div class="sponsors cell3 padAll">
+        <span>Official <a href="http://hot.openstreetmap.org/" target="_blank">HOT OSM</a> learning materials</span>
+        <a class="logo logo-hot left" href="http://hot.openstreetmap.org/" target="_blank"></a>
+        <a class="logo logo-ausaid left" href="http://www.ausaid.gov.au/" target="_blank"></a>
+        <a class="logo logo-bnpb left" href="http://www.bnpb.go.id/" target="_blank"></a>
+      </div>
+    </small>
+  </div>
+  
+  <script>
+  // autocomplete search with all-translation json
+    $.getJSON("/all-translation.json",function(data){
+      console.log(data);
+      var lang = "jp";
+      data.forEach(function(o){
+        if (o.lang === lang){
+          var destination;
+          $( "#search-field" ).autocomplete({
+           autoFocus: true, // highlight the first search result in dropdown
+           delay: 0,
+           source: o.chapters,
+           select: function(event, ui) {
+             destination = '' + ui.item.url;
+             window.location = destination;
+           }
+          });
+        }
+      })
+  });
+  </script>
+
+<ul style="z-index: 1; display: none;" tabindex="0" id="ui-id-1" class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all"></ul><div style="bottom: auto; left: 911px; right: auto; top: 227px; display: none;" class="translator-theme-default" id="translator-floating-panel"><div title="クリックして翻訳" id="translator-floating-panel-button"></div></div></body></html>
