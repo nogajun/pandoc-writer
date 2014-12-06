@@ -10,6 +10,10 @@ PandocとLibreOffice WriterでiDエディタのマニュアルを製本する
 Web上から[OpenStreetMap](http://www.openstreetmap.org/)が編集できる、iDというエディタがあります。
 このエディタの解説が[LernOSM](http://learnosm.org/jp/)にPublic Domainで公開されているのですが、OSMマッピングパーティで人が集まった時には手元で見られるように紙に印刷したいと思い、[Pandoc](http://johnmacfarlane.net/pandoc/)とLibreOffice Writerを使って冊子を作成しました。
 
+今回作成したファイル一式はgithubに置いているので、興味のある人はダウンロードして遊んでみて下さい。
+
+- nogajun/pandoc-writer: <https://github.com/nogajun/pandoc-writer>
+
 ## Pandocとは
 
 [Pandoc](http://johnmacfarlane.net/pandoc/)は、Haskellで書かれたドキュメント変換ツールです。
@@ -174,7 +178,11 @@ PDFに出力するとコンビニなどで印刷もできるので、とても�
 ## 完成
 
 こんな感じにできあがりました。
-(印刷中)
+本文のフォントサイズを10.5ptにしたけど大きすぎる気がしたので、9ptのほうがよかったかなー。
+
+実際に印刷できるマニュアルは [githubリポジトリ]() に置いているので印刷して自分の好みにあった形に変更してみて下さい。
+
+![Vineスクリーンショット](vine-screenshot.png)
 
 ## おまけ
 
@@ -193,6 +201,6 @@ odtファイルに含まれるcontent.xmlを参考に変更すると、よりよ
 
 例では、HTMLで書かれた文書をodtに変換して編集しましたが、Pandocはさまざまな文書フォーマットに対応しているので、長文の原稿をMarkdownで書いて、LibreOfficeで編集して印刷といったこともできます。
 
-ということで、PandocとLibreOffice Writerを使うと、テキストエディタで書いて、*そこそこ*見られる形に整形した文書が作成できるので活用してください。
+ということで、PandocとLibreOffice Writerを使うとテキストエディタで書いて、*そこそこ*見られる形に整形した文書が作成できるので活用してください。
 
 
