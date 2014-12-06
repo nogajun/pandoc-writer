@@ -5,6 +5,8 @@
 PandocとLibreOffice WriterでiDエディタのマニュアルを製本する
 ==========================================================
 
+この記事は [LibreOffice Advent Calendar 2014](http://www.adventar.org/calendars/507) 6日目の記事です。
+
 Web上から[OpenStreetMap](http://www.openstreetmap.org/)が編集できる、iDというエディタがあります。
 このエディタの解説が[LernOSM](http://learnosm.org/jp/)にPublic Domainで公開されているのですが、OSMマッピングパーティで人が集まった時には手元で見られるように紙に印刷したいと思い、[Pandoc](http://johnmacfarlane.net/pandoc/)とLibreOffice Writerを使って冊子を作成しました。
 
@@ -172,24 +174,25 @@ PDFに出力するとコンビニなどで印刷もできるので、とても�
 ## 完成
 
 こんな感じにできあがりました。
+(印刷中)
 
+## おまけ
 
+作成したreference-japanese.odtですが、常用する場合は毎回オプションをつけるのは面倒なので、ファイル名を「reference.odt」に変更して以下のディレクトリに保存しておくと、odtに変換時に自動的に適用してくれます。
+
+- Linux: $HOME/.pandoc
+- Windows: C:\Users\USERNAME\AppData\Roaming\pandoc
+
+また、変換に使うテンプレートも変更できるので、以下のように出力したodtテンプレートを
+
+    $ pandoc -D odt ~/.pandoc/templates/default.opendocument
+
+odtファイルに含まれるcontent.xmlを参考に変更すると、よりよい形に出力できると思います。
 
 ## 最後に
 
 例では、HTMLで書かれた文書をodtに変換して編集しましたが、Pandocはさまざまな文書フォーマットに対応しているので、長文の原稿をMarkdownで書いて、LibreOfficeで編集して印刷といったこともできます。
 
-ということで、PandocとLibreOffice Writerを使うと、テキストエディタで書いて、*そこそこ*見られる形に整形した文書が作成できるので活用してみると良いと思います。
+ということで、PandocとLibreOffice Writerを使うと、テキストエディタで書いて、*そこそこ*見られる形に整形した文書が作成できるので活用してください。
 
-## おまけ
 
-作成したreference.odtを毎回使う場合は、以下のディレクトリに保存しておくとオプションで指定しなくても利用できます。
-
-- Linux: $HOME/.pandoc
-- Windows: C:\Users\USERNAME\AppData\Roaming\pandoc
-
-また、変換に使うテンプレートも変更できるので以下の用に出力したodtテンプレートを
-
-    $ pandoc -D odt ~/.pandoc/templates/default.opendocument
-
-odtファイルに含まれるcontent.xmlを参考に変更すると、よりよい形に出力できると思います。
