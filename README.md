@@ -21,16 +21,22 @@ Files
 Build
 -----
 
+Please install git and pandoc.
+
+	$ apt install git pandoc
+
+Clone Repository.
+
 	$ git clone https://github.com/nogajun/pandoc-writer.git
 	$ cd pandoc-writer/
 
 iD Manual
 
-    $ pandoc -f html -t odt --reference-odt=./reference/reference-japanese.odt -o idmanual.odt LearnOSM.html
+    $ pandoc -f html -t odt --reference-odt=reference/reference-japanese.odt -o idmanual.odt LearnOSM.html
 
 text
 
-    $ pandoc -f markdown -t odt --reference-odt=./reference/reference-japanese.odt -o pandoc-writer.odt pandoc-writer.md
+    $ pandoc -f markdown -t odt --reference-odt=reference/reference-japanese.odt -o pandoc-writer.odt pandoc-writer.md
 
 License
 -------

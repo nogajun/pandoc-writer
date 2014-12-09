@@ -189,7 +189,7 @@ PDFに出力するとコンビニなどで印刷もできるので、とても�
 作成したreference-japanese.odtですが、常用する場合は毎回オプションをつけるのは面倒なので、ファイル名を「reference.odt」に変更して以下のディレクトリに保存しておくと、odtに変換時に自動的に適用してくれます。
 
 - Linux: $HOME/.pandoc
-- Windows: C:\Users\USERNAME\AppData\Roaming\pandoc
+- Windows: C:\\Users\\USERNAME\\AppData\\Roaming\\pandoc
 
 また、変換に使うテンプレートも変更できるので、以下のように出力したodtテンプレートを
 
